@@ -1,0 +1,115 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import url(common.css);
+
+@media(min-width:768px) {
+  #search-form {
+    margin-right: 20px;
+  }
+}
+
+.location {
+  color: #fff;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+.filters .text-center {
+  color: #fff;
+}
+
+.filters .produce {
+  margin-bottom: 3px;
+}
+
+/* Shadow for farm photos */
+.shadow {
+  /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(transparent, transparent, #000);
+  /* For Opera 11.1 to 12.0 */
+  background: -o-linear-gradient(transparent, transparent, #000);
+  /* For Firefox 3.6 to 15 */
+  background: -moz-linear-gradient(transparent, transparent, #000);
+  /* Standard syntax */
+  background: linear-gradient(transparent, transparent, #000);
+}
+
+/* Content on the farm photos */
+.content-overlay {
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  width: 90%;
+  display: inline;
+}
+
+img {
+  z-index: -1;
+  position: relative;
+  width: 100%;
+}
+
+.reviews {
+  float: left;
+  padding-top: 7px;
+  padding-left: 5px;
+}
+
+.farm-produce-list {
+  position: absolute;
+  right: 0;
+  bottom: 5%;
+  width: 20%;
+}
+.farm-produce {
+  float: right;
+  padding: 3px;
+}
+
+footer {
+  color: #fff;
+  margin: 50px 0;
+}
+
+
+
+
+/****** Style Star *****/
+
+fieldset, label { margin: 0; padding: 0; }
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+
+/* full star */
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+/* half star */
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+/* grey star */
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/* gold star */
+.rating > input:checked ~ label {
+  color: #FFD700;
+}

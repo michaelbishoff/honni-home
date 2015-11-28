@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/1-col-portfolio.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,180 +27,243 @@
 </head>
 
 <body>
-
+    
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+    <nav class="navbar navbar-static-top navbar-custom"> <!-- navbar-custom -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+<!--            <img alt="Honni" src=""-->
+            Honni
+          </a>
         </div>
-        <!-- /.container -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+          <form id="search-form" class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+<!--            <button type="submit" class="btn btn-default">Submit</button>-->
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
 
     <!-- Page Content -->
     <div class="container">
+<!--
+      <div class="text-center">
+        <form class="form-inline global-search" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="">Enter search terms</label>
+            <input type="search" class="form-control" id="k" name="k" placeholder="Enter search terms">
+            <input id="cn" name="cn" type="hidden" value="false" />
+          </div>
+          <button type="submit" id="s" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </form>
+      </div>
+-->
 
         <!-- Page Heading -->
+      <div class="page-hader">
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Page Heading
-                    <small>Secondary Text</small>
-                </h1>
-            </div>
+          <div class="col-lg-12">
+            <h2 class="location">Farms Near: Baltimore MD, 21250</h2>
+          </div>
+          <div class="col-lg-12">
+            <button id="filter-results" type="button" class="btn btn-default">Filter Results</button>
+          </div>
         </div>
-        <!-- /.row -->
+        <div id="filters" class="row filters" style="display:none">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="text-center">
+                  <b>Sort By</b><br>
+                  <div class="btn-group-vertical" role="group">
+                    <button type="button" class="btn btn-success">Least Distance</button>
+                    <button type="button" class="btn btn-default">Highest Rating</button>
+                    <button type="button" class="btn btn-default">Most Reviews</button>
+                  </div>
+                </div>
+              </div>
 
-        <!-- Project One -->
+              <div class="col-sm-4">
+                <div class="text-center">
+                  <b>Produce Types</b><br>
+                  <div class="btn-group-sm" role="group">
+                    <button type="button" class="btn btn-success produce">Meat</button>
+                    <button type="button" class="btn btn-default produce">Cheese</button>
+                    <button type="button" class="btn btn-default produce">Vegetables</button>
+                    <button type="button" class="btn btn-default produce">Fruits</button>
+                    <button type="button" class="btn btn-success produce">Honney</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="text-center">
+                  <b>Producer Type</b><br>
+                  <div class="btn-group-vertical" role="group">
+                    <button type="button" class="btn btn-success">Garden</button>
+                    <button type="button" class="btn btn-success">Farm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+      
+      <hr>
+      
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+          <a href="#">
+            <div class="shadow">
+              <img class="img-responsive" src="img/farm1.jpg" alt="">
+              <div class="content-overlay">
+                <h2>Johnson Farms</h2>
+
+                <!-- set title on all labels based on raiting -->
+                <fieldset class="rating">
+                  <input type="radio" id="star5" name="rating-0" value="5" disabled/>
+                  <label class="full" for="star5" title="Awesome - 5 stars"></label>
+                  <input type="radio" id="star4half" name="rating-0" value="4.5" disabled/>
+                  <label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                  <input type="radio" id="star4" name="rating-0" value="4" disabled/>
+                  <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                  <input type="radio" id="star3half" name="rating-0" value="3.5" disabled/>
+                  <label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                  <input type="radio" id="star3" name="rating-0" value="3" disabled checked/>
+                  <label class="full" for="star3" title="Meh - 3 stars"></label>
+                  <input type="radio" id="star2half" name="rating-0" value="2.5" disabled/>
+                  <label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                  <input type="radio" id="star2" name="rating-0" value="2" disabled/>
+                  <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <input type="radio" id="star1half" name="rating-0" value="1.5" disabled/>
+                  <label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                  <input type="radio" id="star1" name="rating-0" value="1" disabled/>
+                  <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                  <input type="radio" id="starhalf" name="rating-0" value="0.5" disabled/>
+                </fieldset>
+                <div class="reviews">
+                  217 Reviews
+                </div>
+
+                <div class="farm-produce-list">
+                  <div class="farm-produce">Meats</div>
+                  <div class="farm-produce">Cheese</div>
+                  <div class="farm-produce">Vegetables</div>
+                  <div class="farm-produce">Fruits</div>
+                  <div class="farm-produce">Honney</div>
+                </div>                      
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+            <a href="#">
+              <div class="shadow">
+                <img class="img-responsive" src="img/farm3.jpg" alt="">
+                <div class="content-overlay">
+                  <h2>Johnson Farms</h2>
+
+                  <!-- set title on all labels based on raiting -->
+                  <fieldset class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" disabled/>
+                    <label class="full" for="star5" title="Awesome - 5 stars"></label>
+                    <input type="radio" id="star4half" name="rating" value="4.5" disabled checked/>
+                    <label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4" disabled/>
+                    <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                    <input type="radio" id="star3half" name="rating" value="3.5" disabled/>
+                    <label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3" disabled/>
+                    <label class="full" for="star3" title="Meh - 3 stars"></label>
+                    <input type="radio" id="star2half" name="rating" value="2.5" disabled/>
+                    <label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2" disabled/>
+                    <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                    <input type="radio" id="star1half" name="rating" value="1.5" disabled/>
+                    <label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1" disabled/>
+                    <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                    <input type="radio" id="starhalf" name="rating" value="0.5" disabled/>
+                  </fieldset>
+                  <div class="reviews">217 Reviews</div>
+
+                  <div class="farm-produce-list">
+                    <div class="farm-produce">Meats</div>
+                    <div class="farm-produce">Cheese</div>
+                    <div class="farm-produce">Vegetables</div>
+                    <div class="farm-produce">Fruits</div>
+                    <div class="farm-produce">Honney</div>
+                  </div>                      
+                </div>
+              </div>
+            </a>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Pagination -->
+      <div class="row text-center">
+        <div class="col-lg-12">
+          <ul class="pagination">
+            <li>
+                <a href="#">&laquo;</a>
+            </li>
+            <li class="active">
+                <a href="#">1</a>
+            </li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">5</a>
+            </li>
+            <li>
+                <a href="#">&raquo;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Footer -->
+      <footer>
         <div class="row">
-          <div class="col-xs-12">
-            <!--940x600 -->
-            <div style="display:block;background-image: url('http://placekitten.com/970/200');width:100%;height:200px;"></div>
-<!--            <a href="#">-->
-<!--              <img class="img-responsive" src="http://placekitten.com/1920/600" alt="">-->
-<!--              <div>hi</div>-->
-<!--            </a>-->
+          <div class="col-lg-12">
+            <p>Copyright &copy; Honni 2015</p>
           </div>
         </div>
         <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Two -->
-        <div class="row">
-            <div class="col-xs-12">
-                <a href="#">
-                  <div class="shadow">
-                    <img class="img-responsive" src="http://placekitten.com/1920/400" alt="">
-                    <h2 class="text">hi</h2>
-                  </div>
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project Two</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Three -->
-        <div class="row">
-            <div class="col-md-12">
-                <a href="#">
-                  <div class="shadow">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                  </div>
-                </a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Four -->
-        <div class="row">
-
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project Four</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Five -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Project Five</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
-                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+      </footer>
 
     </div>
     <!-- /.container -->
@@ -210,6 +273,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+  
+    <!-- Custom JavaScript -->
+    <script src="js/home.js"></script>
 
 </body>
 
