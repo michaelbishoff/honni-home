@@ -34,7 +34,11 @@ html {
   }
 }
 
+.form-elements {
+  margin-top: 2em;
+}
 
-body {
-  height: auto !important;
+.form-submit {
+  width:100%;
+  margin-top:1em;
 }

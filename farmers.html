@@ -51,7 +51,7 @@
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="#">For Farmers</a></li>
           </ul>
-          <form id="search-form" class="navbar-form navbar-right" role="search">
+          <form id="search-form" class="navbar-form navbar-right" role="search" action="index.html" method="">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
@@ -75,22 +75,22 @@
             </div>
             
             <!-- Login Form -->
-            <div class="row" style="margin-top: 2em;color:white">
+            <div class="row form-elements">
               <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-                <form method="" action="">
+                <form name="login" action="" method="" onsubmit="return validateLogin()">
                   <div class="form-group"> <!-- has-error has-feedback -->
   <!--<label class="control-label" for="email">Email address</label>-->
-                    <input type="email" class="form-control" id="email" placeholder="Email Address">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
   <!--<span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
                   </div>
 
                   <div class="form-group"> <!-- has-error has-feedback -->
   <!--<label class="control-label" for="password">Password</label>-->
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
 <!--<span class="glyphicon glyphicon-remove form-control-feedback"></span>-->
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary" style="width:100%;margin-top:1em;">Login</button>
+                    <button type="submit" class="btn btn-primary form-submit">Login</button>
                   </div>
                 </form>
               </div>
@@ -104,29 +104,29 @@
             </div>
             
             <!-- Signup Form -->
-            <div class="row" style="margin-top: 2em;color:white">
+            <div class="row form-elements">
               <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-                <form method="" action="">
+                <form name="signup" action="" method="" onsubmit="return validateSignup()">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Email Address">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
                   </div>
                   <div class="form-group">
-                    <input type="number" class="form-control" id="zipcode" placeholder="ZIP Code">
+                    <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="ZIP Code">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
+                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary" style="width:100%;margin-top:1em;">Sign up</button>
+                    <button type="submit" class="btn btn-primary form-submit">Sign up</button>
                   </div>
                 </form>
               </div>
