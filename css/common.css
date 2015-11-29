@@ -1,12 +1,12 @@
 body {
     /* For Safari 5.1 to 6.0 */
-  background: -webkit-linear-gradient(225deg, rgba(245,214,81, 0.8), rgba(248,91,86, 0.8)), url(../img/farm2.jpg) no-repeat center center fixed;
+  background: -webkit-linear-gradient(45deg, rgba(244, 51, 44, 0.8) 30%, rgba(244, 207, 51, 0.8)), url(../img/farm2.jpg) no-repeat center center fixed;
   /* For Opera 11.1 to 12.0 */
-  background: -o-linear-gradient(225deg, rgba(245,214,81, 0.8), rgba(248,91,86, 0.8)), url(../img/farm2.jpg) no-repeat center center fixed;
+  background: -o-linear-gradient(45deg, rgba(244, 51, 44, 0.8) 30%, rgba(244, 207, 51, 0.8)), url(../img/farm2.jpg) no-repeat center center fixed;
   /* For Firefox 3.6 to 15 */
-  background: -moz-linear-gradient(225deg, rgba(245,214,81, 0.8), rgba(248,91,86, 0.8)), url(../img/farm2.jpg) no-repeat center center fixed;
+  background: -moz-linear-gradient(45deg, rgba(244, 51, 44, 0.8) 30%, rgba(244, 207, 51, 0.8)), url(../img/farm2.jpg) no-repeat center center fixed;
   /* Standard syntax (must be last) */
-  background: linear-gradient(225deg, rgba(244, 207, 51, 0.8), rgba(244, 51, 44, 0.8)) ,url(../img/farm2.jpg) no-repeat center center fixed;
+  background: linear-gradient(45deg, rgba(244, 51, 44, 0.8) 30%, rgba(244, 207, 51, 0.8)) ,url(../img/farm2.jpg) no-repeat center center fixed;
   
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -21,11 +21,6 @@ body {
     letter-spacing: 1px;
     color: #fff;
     background: transparent;
-}
-
-.navbar-custom .navbar-brand {
-    font-weight: 500;
-    color: #fff;
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -73,6 +68,12 @@ body {
     color: #171717;
 }
 
+.navbar-brand {
+    float: left;
+    padding: 0;
+    width: 150px;
+}
+
 @media(min-width:768px) {
     .navbar-custom {
         border-bottom: 1px solid #fff;
@@ -89,4 +90,33 @@ body {
         border-bottom: 1px solid #fff;
         background: transparent;
     }
+    
+    .navbar-collapse {
+        padding-top:15px;
+    }
+  
+    .navbar-brand {
+        float: left;
+        margin-left: -15px;
+        padding: 0;
+        width: 200px;
+        height: auto;
+    }
+    
+    .navbar-custom a {
+      border-radius: 5px;
+    }
+  
+/*    .navbar-brand {*/
+/*      float: left;*/
+    /*  height: 50px;*/
+    /*  padding: 15px 15px;*/
+    /*  font-size: 18px;*/
+    /*  line-height: 20px;
+/*    }*/
+  
+}
+
+.icon-bar {
+    border: 1px solid white;
 }
