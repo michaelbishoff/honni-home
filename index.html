@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/home.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +27,6 @@
 </head>
 
 <body>
-    
     <!-- Navigation -->
     <nav class="navbar navbar-static-top navbar-custom"> <!-- navbar-custom -->
       <div class="container-fluid">
@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img id="logo" alt="Honni" src="img/logo.png">
           </a>
         </div>
@@ -47,211 +47,55 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="index.html">Home</a></li>
             <li><a href="farmers.html">For Farmers</a></li>
           </ul>
-          <form id="search-form" class="navbar-form navbar-right" role="search" action="index.html" method="">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+          <form id="search-form" class="navbar-form navbar-right" role="search" action="search.html" method="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Produce near zipcode">
+              <span class="input-group-btn">
+                <button class="btn btn-default">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
             </div>
-<!--            <button type="submit" class="btn btn-default">Submit</button>-->
           </form>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
+    
     <!-- Page Content -->
-    <div class="container">
-<!--
-      <div class="text-center">
-        <form class="form-inline global-search" role="form">
-          <div class="form-group">
-            <label class="sr-only" for="">Enter search terms</label>
-            <input type="search" class="form-control" id="k" name="k" placeholder="Enter search terms">
-            <input id="cn" name="cn" type="hidden" value="false" />
-          </div>
-          <button type="submit" id="s" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-        </form>
-      </div>
+    <div class="container white">
+      <div class="page-content">
+      <!-- 
+        How to Use Honni
+        Mission
+        Testimonials
 -->
-
-      <!-- Page Heading -->
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 class="location">Farms Near: Baltimore MD, 21250</h2>
+        
+        <!-- Statement -->
+        <div class="text-center">
+          <h3>Honni is the peer to peer local produce finder</h3>
         </div>
-        <div class="col-lg-12">
-          <button id="filter-results" type="button" class="btn btn-default">Filter Results</button>
+        
+        <!-- How to -->
+        <h1 class="page-header">How to use Honni</h1>
+        <div>
+  <!--        1. Search for a produce you are looking for-->
         </div>
-      </div>
-      <div id="filters" class="row filters" style="display:none">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="text-center">
-                <b>Sort By</b><br>
-                <div class="btn-group-vertical" role="group">
-                  <button type="button" class="btn btn-success">Least Distance</button>
-                  <button type="button" class="btn btn-default">Highest Rating</button>
-                  <button type="button" class="btn btn-default">Most Reviews</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="text-center">
-                <b>Produce</b><br>
-                <div class="btn-group-sm" role="group">
-                  <button type="button" class="btn btn-success produce">Meat</button>
-                  <button type="button" class="btn btn-default produce">Cheese</button>
-                  <button type="button" class="btn btn-default produce">Vegetables</button>
-                  <button type="button" class="btn btn-default produce">Fruits</button>
-                  <button type="button" class="btn btn-success produce">Honney</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="text-center">
-                <b>Producers</b><br>
-                <div class="btn-group-vertical" role="group">
-                  <button type="button" class="btn btn-success">Garden</button>
-                  <button type="button" class="btn btn-success">Farm</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        
+        <!-- Mission -->
+        <h1 class="page-header">Mission</h1>
+        <div>
+            Honni connects consumers and buyers with farmers, growers, and sellers. The health-conscious consumer selects any produce they are looking for, and our site immediately locates farmers and backyard growers within a certain radius which sell exactly what the buyer wants.<br><br>Modeled off of Uber and Airbnb, Honni is a peer-to-peer service, meaning even a small time community-gardener can sell their produce through the app once they get verified.
+        </div>
+        
+        <!-- Testimonials -->
+        <h1 class="page-header">Testimonials</h1>
+        <div class="row white">
         </div>
       </div>
-      <!-- /.row -->
       
-      <hr>
-      
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-          <a href="#">
-            <div class="shadow">
-              <img class="img-responsive" src="img/farm1.jpg" alt="">
-              <div class="content-overlay">
-                <h2>Johnson Farms</h2>
-                <h4>2 Miles</h4>
-                <!-- set title on all labels based on raiting -->
-                <fieldset class="rating">
-                  <input type="radio" id="star5" name="rating-0" value="5" disabled/>
-                  <label class="full" for="star5" title="Awesome - 5 stars"></label>
-                  <input type="radio" id="star4half" name="rating-0" value="4.5" disabled/>
-                  <label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-                  <input type="radio" id="star4" name="rating-0" value="4" disabled/>
-                  <label class="full" for="star4" title="Pretty good - 4 stars"></label>
-                  <input type="radio" id="star3half" name="rating-0" value="3.5" disabled/>
-                  <label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                  <input type="radio" id="star3" name="rating-0" value="3" disabled checked/>
-                  <label class="full" for="star3" title="Meh - 3 stars"></label>
-                  <input type="radio" id="star2half" name="rating-0" value="2.5" disabled/>
-                  <label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-                  <input type="radio" id="star2" name="rating-0" value="2" disabled/>
-                  <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
-                  <input type="radio" id="star1half" name="rating-0" value="1.5" disabled/>
-                  <label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                  <input type="radio" id="star1" name="rating-0" value="1" disabled/>
-                  <label class="full" for="star1" title="Sucks big time - 1 star"></label>
-                  <input type="radio" id="starhalf" name="rating-0" value="0.5" disabled/>
-                </fieldset>
-                <div class="reviews">
-                  217 Reviews
-                </div>
-                
-                <div class="farm-produce-list">
-                  <div class="farm-produce">Meats</div>
-                  <div class="farm-produce">Cheese</div>
-                  <div class="farm-produce">Vegetables</div>
-                  <div class="farm-produce">Fruits</div>
-                  <div class="farm-produce">Honney</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-            <a href="#">
-              <div class="shadow">
-                <img class="img-responsive" src="img/farm3.jpg" alt="">
-                <div class="content-overlay">
-                  <h2>Johnson Farms</h2>
-                  <h4>2 Miles</h4>
-                  <!-- set title on all labels based on raiting -->
-                  <fieldset class="rating">
-                    <input type="radio" id="star5" name="rating" value="5" disabled/>
-                    <label class="full" for="star5" title="Awesome - 5 stars"></label>
-                    <input type="radio" id="star4half" name="rating" value="4.5" disabled checked/>
-                    <label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-                    <input type="radio" id="star4" name="rating" value="4" disabled/>
-                    <label class="full" for="star4" title="Pretty good - 4 stars"></label>
-                    <input type="radio" id="star3half" name="rating" value="3.5" disabled/>
-                    <label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                    <input type="radio" id="star3" name="rating" value="3" disabled/>
-                    <label class="full" for="star3" title="Meh - 3 stars"></label>
-                    <input type="radio" id="star2half" name="rating" value="2.5" disabled/>
-                    <label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-                    <input type="radio" id="star2" name="rating" value="2" disabled/>
-                    <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
-                    <input type="radio" id="star1half" name="rating" value="1.5" disabled/>
-                    <label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                    <input type="radio" id="star1" name="rating" value="1" disabled/>
-                    <label class="full" for="star1" title="Sucks big time - 1 star"></label>
-                    <input type="radio" id="starhalf" name="rating" value="0.5" disabled/>
-                  </fieldset>
-                  <div class="reviews">217 Reviews</div>
-
-                  <div class="farm-produce-list">
-                    <div class="farm-produce">Meats</div>
-                    <div class="farm-produce">Cheese</div>
-                    <div class="farm-produce">Vegetables</div>
-                    <div class="farm-produce">Fruits</div>
-                    <div class="farm-produce">Honney</div>
-                  </div>                      
-                </div>
-              </div>
-            </a>
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- Pagination -->
-      <div class="row text-center">
-        <div class="col-lg-12">
-          <ul class="pagination">
-            <li>
-                <a href="#">&laquo;</a>
-            </li>
-            <li class="active">
-                <a href="#">1</a>
-            </li>
-            <li>
-                <a href="#">2</a>
-            </li>
-            <li>
-                <a href="#">3</a>
-            </li>
-            <li>
-                <a href="#">4</a>
-            </li>
-            <li>
-                <a href="#">5</a>
-            </li>
-            <li>
-                <a href="#">&raquo;</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- /.row -->
-
       <!-- Footer -->
       <footer>
         <div class="row">
@@ -259,7 +103,6 @@
             <p>Copyright &copy; Honni 2015</p>
           </div>
         </div>
-        <!-- /.row -->
       </footer>
 
     </div>
@@ -272,8 +115,7 @@
     <script src="js/bootstrap.min.js"></script>
   
     <!-- Custom JavaScript -->
-    <script src="js/home.js"></script>
-
+    <script src="js/farmers.js"></script>
 </body>
 
 </html>

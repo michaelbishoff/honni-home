@@ -30,6 +30,8 @@ function validateLogin() {
   return isValid;
 }
 
+/* There is a lot of unesseary checks because HTML5
+   can check if a field has a value */
 function validateSignup() {
   var form = document.forms["signup"];
   
@@ -38,19 +40,7 @@ function validateSignup() {
   $(form).find("span").remove();
   
   var isValid = true;
-  
-  // Check if first name has a value
-  if (form["firstname"].value == "") {
-    invalidateField(form["firstname"], "Missing first name");
-    isValid = false;
-  }
-  
-  // Check if last name has a value
-  if (form["lastname"].value == "") {
-    invalidateField(form["lastname"], "Missing last name");
-    isValid = false;
-  }
-  
+      
   // Check if email has a value
   if (form["email"].value == "") {
     invalidateField(form["email"], "Missing email");
@@ -100,6 +90,12 @@ function validateSignup() {
   else if (form["password"].value != form["confirm-password"].value) {
     invalidateField(form["password"], "Passwords don't match");
     invalidateField(form["confirm-password"], "Passwords don't match");
+    isValid = false;
+  }
+  
+  // Check if they selected a producer type
+  // This is never true becuase of HTML5 validation
+  if (form["producerType"].value == "") {
     isValid = false;
   }
   

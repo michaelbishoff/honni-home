@@ -1,9 +1,4 @@
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import url(common.css);
-
-html {
-  height: 100%;
-}
 
 .header {
   color: #fff;
@@ -36,6 +31,11 @@ html {
 
 .form-elements {
   margin-top: 2em;
+}
+
+.producer-type {
+  display: inline;
+  margin-right: 20px;
 }
 
 .form-submit {

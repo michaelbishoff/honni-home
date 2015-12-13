@@ -51,11 +51,15 @@
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="#">For Farmers</a></li>
           </ul>
-          <form id="search-form" class="navbar-form navbar-right" role="search" action="index.html" method="">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+          <form id="search-form" class="navbar-form navbar-right" role="search" action="search.html" method="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Produce near zipcode">
+              <span class="input-group-btn">
+                <button class="btn btn-default">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
             </div>
-<!--            <button type="submit" class="btn btn-default">Submit</button>-->
           </form>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -104,26 +108,48 @@
             </div>
             
             <!-- Signup Form -->
-            <div class="row form-elements">
+            <div class="row form-elements white">
               <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
                 <form name="signup" action="" method="" onsubmit="return validateSignup()">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                  </div>
+                  <div class="form-group text-center">
+                  <div data-toggle="buttons">
+                    <div class="producer-type">Producer Type:</div>
+                      <div class="btn-group">
+                        <label class="btn btn-success"> 
+                          <input type="radio" name="producerType" value="farmer" class="sr-only" required>
+                          Farmer
+                        </label>
+                        <label class="btn btn-success">
+                          <input type="radio" name="producerType" value="gardener" class="sr-only" required>
+                          Gardener
+                        </label>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                    <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="ZIP Code" required>
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="ZIP Code">
+                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
                   </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                  <div>
+                    <div>
+                      Note: All produce listings are free for the first month,
+                      then you will have to play $5/listing every 2 weeks or
+                      $25/month for unlimited listing.
+                    </div>
+                    <br>
+                    <div>
+                    By creating an account, you agree to Honni’s
+                      <a style="color:lightblue">Terms of Service</a> and
+                      <a style="color:lightblue">Privacy Policy</a>.
+                    </div>
                   </div>
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary form-submit">Sign up</button>
@@ -136,12 +162,6 @@
       </div>
       <!-- /.row -->
       
-      
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-        </div>
-      </div>
-
       <!-- Footer -->
       <footer>
         <div class="row">
