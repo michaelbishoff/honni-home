@@ -1,4 +1,10 @@
 # [Home page](http://michaelbishoff.github.io/honni-home)
+This is the inital frontend design requsted.
+
+# [Finished website](http://www.honni.org/)
+Live site with backend. Backend code [can be found here](https://github.com/honni/honni).
+
+
 
 ## Copyright and License
 
